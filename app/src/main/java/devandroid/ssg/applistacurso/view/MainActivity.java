@@ -3,6 +3,7 @@ package devandroid.ssg.applistacurso.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import devandroid.ssg.applistacurso.R;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa.setCursoDesejado("Android");
         outraPessoa.setCursoDesejado("Java");
         outraPessoa.setTelefoneContato("065 99664-3105");
+/*
 
         dadosPessoa = "Primeiro nome : ";
         dadosPessoa += pessoa.getPrimeiroNome();
@@ -42,9 +44,10 @@ public class MainActivity extends AppCompatActivity {
         dadosPessoa += pessoa.getCursoDesejado();
         dadosPessoa += " Telefone de Contato: ";
         dadosPessoa += pessoa.getTelefoneContato();
+*/
 
-        int parada = 0;
-
+        Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
+        Log.i("POOAndroid","Objeto outraPessoa: "+outraPessoa.toString());
 
 
 
