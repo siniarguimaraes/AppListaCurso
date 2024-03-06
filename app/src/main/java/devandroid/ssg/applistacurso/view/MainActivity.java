@@ -11,13 +11,14 @@ import android.widget.Toast;
 
 import devandroid.ssg.applistacurso.R;
 
+import devandroid.ssg.applistacurso.controller.PessoaController;
 import devandroid.ssg.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
     Pessoa pessoa;
     Pessoa outraPessoa;
-
+    PessoaController controller;
     EditText editPrimeioNome;
     EditText editSobreNome;
     EditText editTextNomeCurso;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         pessoa = new Pessoa();
+        controller = new PessoaController();
 
         outraPessoa = new Pessoa();
         outraPessoa.setPrimeiroNome("Luiz");
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(MainActivity.this, "Salvo :" + pessoa.toString(), Toast.LENGTH_LONG).show();
 
+                controller.salvar(pessoa);
             }
         });
 
