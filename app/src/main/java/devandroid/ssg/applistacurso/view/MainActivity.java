@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         preferences = getSharedPreferences(NOME_PREFERENCES,0);
         SharedPreferences.Editor listaVip = preferences.edit();
 
+
         controller = new PessoaController();
         pessoa = new Pessoa();
         pessoa.setPrimeiroNome(preferences.getString("primeiroNome",""));
