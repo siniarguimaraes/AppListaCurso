@@ -10,15 +10,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 import devandroid.ssg.applistacurso.R;
 
+import devandroid.ssg.applistacurso.controller.CursoController;
 import devandroid.ssg.applistacurso.controller.PessoaController;
+import devandroid.ssg.applistacurso.model.Curso;
 import devandroid.ssg.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
-    Pessoa pessoa;
-    Pessoa outraPessoa;
     PessoaController controller;
+    CursoController cursoController;
+
+    Pessoa pessoa;
+    List<Curso> listaDeCursos;
     EditText editPrimeioNome;
     EditText editSobreNome;
     EditText editTextNomeCurso;
@@ -34,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         controller = new PessoaController(MainActivity.this);
+
+        cursoController = new CursoController();
+        listaDeCursos = cursoController.getListaDeCursos();
 
         pessoa = new Pessoa();
         controller.buscar(pessoa);
