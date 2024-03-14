@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         nomesDosCursos = cursoController.dadosParaSpinner();
 
         pessoa = new Pessoa();
-        controller.buscar(pessoa);
+        controller.buscarSharedPreferences(pessoa);
 
         editPrimeioNome = findViewById(R.id.editPrimeiroNome);
         editSobreNome = findViewById(R.id.editSobreNome);

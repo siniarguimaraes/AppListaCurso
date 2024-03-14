@@ -6,6 +6,7 @@ public class Pessoa {
     private String sobreNome;
     private String cursoDesejado;
     private String telefoneContato;
+    private int id;
 
     public Pessoa(){}
 
@@ -39,6 +40,14 @@ public class Pessoa {
 
     public void setTelefoneContato(String telefoneContato) {
         this.telefoneContato = telefoneContato;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     // To String - Para Textos - Para Strings de Caracteres
